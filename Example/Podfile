@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'RxMoyaCache_Example' do
+  pod 'RxMoyaCache', :path => '../'
+
+  target 'RxMoyaCache_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
