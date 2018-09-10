@@ -137,7 +137,7 @@
 		7F0A9928249FF1F9563F71B57794A375 /* Multicast.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF454D4A8D2204D1C125D78F65A294F7 /* Multicast.swift */; };
 		7F34A39F66051E7897486675F4F7381E /* Completable+AndThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B897BA6A1C919A5F7639B010FC751DEE /* Completable+AndThen.swift */; };
 		7FF4688A271E8B0E2A7F9E6BA8D570E2 /* SynchronizedUnsubscribeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82456EBB5E8B5E59BD818E9208A2532F /* SynchronizedUnsubscribeType.swift */; };
-		813FB0FC10F6020B84D6697A15A9F89B /* Reactive+MoyaProviderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EAB657A762BCBB84A9F180339F2F1C /* Reactive+MoyaProviderType.swift */; };
+		813FB0FC10F6020B84D6697A15A9F89B /* MoyaProviderType+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EAB657A762BCBB84A9F180339F2F1C /* MoyaProviderType+Rx.swift */; };
 		814C38C6FBBE28DF2B0C68FA999B8B5D /* URLRequest+Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0893BD081AABCBC1CF93CB6D7FE7FD9F /* URLRequest+Encoding.swift */; };
 		8191DB886FF7773A476366F986051834 /* GroupedObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB34C4725F94F226B9B34F84034323 /* GroupedObservable.swift */; };
 		81AFCB150E88434CC95C3A565797FB97 /* Maybe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C351518BD563BD6D09EF2D9AC0CBD /* Maybe.swift */; };
@@ -385,7 +385,7 @@
 		1CE5C9FC902716E1A5472CD73F1B2EAF /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		1E666C07B820BF4EAC556021A7FD8A67 /* ElementAt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ElementAt.swift; path = RxSwift/Observables/ElementAt.swift; sourceTree = "<group>"; };
 		22188F0471B0BEABA328833E0B880AB7 /* TargetProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TargetProvider.swift; path = RxMoyaCache/Classes/TargetProvider.swift; sourceTree = "<group>"; };
-		22EAB657A762BCBB84A9F180339F2F1C /* Reactive+MoyaProviderType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Reactive+MoyaProviderType.swift"; path = "RxMoyaCache/Classes/Reactive+MoyaProviderType.swift"; sourceTree = "<group>"; };
+		22EAB657A762BCBB84A9F180339F2F1C /* MoyaProviderType+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MoyaProviderType+Rx.swift"; path = "RxMoyaCache/Classes/MoyaProviderType+Rx.swift"; sourceTree = "<group>"; };
 		23030BD3A59C3BEADE2298128519B7B2 /* RxSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RxSwift-Info.plist"; sourceTree = "<group>"; };
 		230D99108DA4475CBE5CBA4728A81BBB /* Result-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Result-Info.plist"; sourceTree = "<group>"; };
 		2406FC7947C2F1C36CFA0801C8F1B05E /* SwitchIfEmpty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwitchIfEmpty.swift; path = RxSwift/Observables/SwitchIfEmpty.swift; sourceTree = "<group>"; };
@@ -964,7 +964,7 @@
 			isa = PBXGroup;
 			children = (
 				0834A79AFA59A555DF61EB696403FA4F /* MoyaCache.swift */,
-				22EAB657A762BCBB84A9F180339F2F1C /* Reactive+MoyaProviderType.swift */,
+				22EAB657A762BCBB84A9F180339F2F1C /* MoyaProviderType+Rx.swift */,
 				679F89EE9379DC864AFC0A2D4C768C65 /* Single+Cache.swift */,
 				22188F0471B0BEABA328833E0B880AB7 /* TargetProvider.swift */,
 				799F658374981BD877693263D21D3291 /* TargetType+Cache.swift */,
@@ -1804,7 +1804,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27D12C425C750C8AB50EAD567EDB2ED5 /* MoyaCache.swift in Sources */,
-				813FB0FC10F6020B84D6697A15A9F89B /* Reactive+MoyaProviderType.swift in Sources */,
+				813FB0FC10F6020B84D6697A15A9F89B /* MoyaProviderType+Rx.swift in Sources */,
 				57191DACED5A3191097031F10D05493E /* RxMoyaCache-dummy.m in Sources */,
 				8DCC1BBEA58D29ACDFB6F0098F898A00 /* Single+Cache.swift in Sources */,
 				88C6E3127E81EFD6E22FDF0B5DA3B784 /* TargetProvider.swift in Sources */,

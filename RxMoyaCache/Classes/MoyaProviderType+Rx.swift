@@ -1,5 +1,5 @@
 //
-//  Reactive+MoyaProviderType.swift
+//  MoyaProviderType+Rx.swift
 //  RxMoyaCache
 //
 //  Created by Pircate on 2018/4/18.
