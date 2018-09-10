@@ -1,0 +1,6 @@
+framework module RxMoyaCache {
+  umbrella header "RxMoyaCache-umbrella.h"
+
+  export *
+  module * { export * }
+}

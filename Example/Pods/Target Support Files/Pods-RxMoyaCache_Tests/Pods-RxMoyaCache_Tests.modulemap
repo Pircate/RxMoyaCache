@@ -1,0 +1,6 @@
+framework module Pods_RxMoyaCache_Tests {
+  umbrella header "Pods-RxMoyaCache_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
