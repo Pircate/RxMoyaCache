@@ -35,15 +35,57 @@ import RxMoyaCache
 ```
 
 ### Snippet
+
+给 `Storable` 添加默认实现，具体实现请看 Demo
+```swift
+extension Storable where Self: TargetType {
+    
+    public var allowsStorage: (Response) -> Bool {
+        return MoyaCache.shared.storagePolicyClosure
+    }
+    
+    public func cachedResponse(for key: CachingKey) throws -> Response {
+        return try Storage<Moya.Response>().object(forKey: key.stringValue)
+    }
+    
+    public func storeCachedResponse(_ cachedResponse: Response, for key: CachingKey) throws {
+        try Storage<Moya.Response>().setObject(cachedResponse, forKey: key.stringValue)
+    }
+    
+    public func removeCachedResponse(for key: CachingKey) throws {
+        try Storage<Moya.Response>().removeObject(forKey: key.stringValue)
+    }
+    
+    public func removeAllCachedResponses() throws {
+        try Storage<Moya.Response>().removeAll()
+    }
+}
+```
+
+`target` 遵循 `Cacheable` 协议
+```swift
+enum StoryAPI: TargetType, Cacheable {
+    case latest
+}
+```
+
+读取缓存
 ```swift
 let provider = MoyaProvider<StoryAPI>()
-provider.rx.cache(.latest)
-    .request()
+provider.rx.cache
+    .request(.latest)
     .map(StoryListModel.self)
     .subscribe(onNext: { object in
+        debugPrint("onNext:", object.topStories[0].title)
+    }).disposed(by: disposeBag)
 
-    }, onError: { error in
+// or
 
+provider.rx.onCache(.latest, type: StoryListModel.self) { object in
+        debugPrint("onCache", object.topStories[0].title)
+    }.request()
+    .subscribe(onSuccess: { object in
+        debugPrint("onSuccess", object.topStories[0].title)
     }).disposed(by: disposeBag)
 ```
 
