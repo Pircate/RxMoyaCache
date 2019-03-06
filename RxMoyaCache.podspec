@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name                  = 'RxMoyaCache'
-  s.version               = '0.1.0'
+  s.version               = '0.2.0'
   s.summary               = 'A network cache library based on RxSwift/Moya/Cache.'
   s.homepage              = 'https://github.com/Pircate/RxMoyaCache'
   s.license               = { :type => 'MIT', :file => 'LICENSE' }
