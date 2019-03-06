@@ -11,7 +11,23 @@ import Moya
 
 extension Reactive where Base: MoyaProviderType, Base.Target: Cacheable {
     
-    public func cache(_ target: Base.Target) -> TargetProvider<Base> {
-        return TargetProvider(target, provider: base)
+    public var cache: CacheProvider<Base> {
+        return CacheProvider(provider: base)
+    }
+    
+    public func onCache<T: Codable>(
+        _ target: Base.Target,
+        type: T.Type,
+        atKeyPath keyPath: String? = nil,
+        using decoder: JSONDecoder = .init(),
+        _ closure: (T) -> Void)
+        -> OnCacheProvider<Base, T>
+    {
+        if let object = try? target.cachedResponse()
+            .map(type, atKeyPath: keyPath, using: decoder) {
+            closure(object)
+        }
+        
+        return OnCacheProvider(target: target, provider: base, keyPath: keyPath, decoder: decoder)
     }
 }

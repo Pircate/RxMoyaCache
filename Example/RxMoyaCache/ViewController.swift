@@ -62,13 +62,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let provider = MoyaProvider<StoryAPI>()
-        provider.rx.cache(.latest)
-            .request()
+        provider.rx.cache
+            .request(.latest)
             .map(StoryListModel.self)
             .subscribe(onNext: { object in
-                debugPrint(object.topStories[0].title)
-            }, onError: { error in
-                
+                debugPrint("onNext:", object.topStories[0].title)
+            }).disposed(by: disposeBag)
+        
+        provider.rx.onCache(.latest, type: StoryListModel.self) { object in
+                debugPrint("onCache", object.topStories[0].title)
+            }.request()
+            .subscribe(onSuccess: { object in
+                debugPrint("onSuccess", object.topStories[0].title)
             }).disposed(by: disposeBag)
     }
 }

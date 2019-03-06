@@ -215,7 +215,7 @@
 		C256402FA6F1499A1DAC9DB1511ADD14 /* HistoricalSchedulerTimeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B78B34D720A2731DA6359782132F272 /* HistoricalSchedulerTimeConverter.swift */; };
 		C257A0378DE240F38CF8A9381552490E /* Pods-RxMoyaCache_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 604D617CD673EF8C9184E223F044B45D /* Pods-RxMoyaCache_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C33DD5C37DCD2F9E6C9EFCAFCE8B2403 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22741A212F1F07AD8D9CC802F032DE11 /* TargetType.swift */; };
-		C3EB8906468F0C9B67493BB444E127B3 /* TargetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55206B1EC51EA1C431161FED7CD5E3F6 /* TargetProvider.swift */; };
+		C3EB8906468F0C9B67493BB444E127B3 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55206B1EC51EA1C431161FED7CD5E3F6 /* Provider.swift */; };
 		C4AA7E2EE2920C222F813C56BA0623CA /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE8A080E9511438284F53E81A8DDFF9 /* Cancellable.swift */; };
 		C70C7EAD1E00DBD19077CF826E63135A /* TakeLast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CA33B0473A0A5FB64749CD2003609E /* TakeLast.swift */; };
 		C945996841EF94EA7817D18E3309E399 /* Do.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93704707DC26977B186F02A0AF38BFA /* Do.swift */; };
@@ -472,7 +472,7 @@
 		536EA48C61315E352241B4DE4C4670A3 /* RxAtomic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxAtomic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		538F3C4AD7329455FFD869205855DF5A /* CurrentThreadScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CurrentThreadScheduler.swift; path = RxSwift/Schedulers/CurrentThreadScheduler.swift; sourceTree = "<group>"; };
 		5498292032F5FE3A9EBEA9D3DBECDCF0 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
-		55206B1EC51EA1C431161FED7CD5E3F6 /* TargetProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TargetProvider.swift; path = RxMoyaCache/Classes/TargetProvider.swift; sourceTree = "<group>"; };
+		55206B1EC51EA1C431161FED7CD5E3F6 /* Provider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Provider.swift; path = RxMoyaCache/Classes/Provider.swift; sourceTree = "<group>"; };
 		563329D8321CE02942454028D200C989 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Shared/Library/Result.swift; sourceTree = "<group>"; };
 		5672C65182D0D767B9F6AA8E4D48ABFA /* ObservationToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObservationToken.swift; path = Source/Shared/Library/ObservationToken.swift; sourceTree = "<group>"; };
 		595670455C0E22A3DA03309773548CE3 /* TypeWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TypeWrapper.swift; path = Source/Shared/Library/TypeWrapper.swift; sourceTree = "<group>"; };
@@ -1290,7 +1290,7 @@
 				73CEEB2B9CDEFE371217818187CDDD08 /* CachingKey.swift */,
 				849BA0F2C0C3AB2FB845AE4781427154 /* MoyaProviderType+Rx.swift */,
 				20B939F1E2083277334ED62C19422A5B /* Single+Cache.swift */,
-				55206B1EC51EA1C431161FED7CD5E3F6 /* TargetProvider.swift */,
+				55206B1EC51EA1C431161FED7CD5E3F6 /* Provider.swift */,
 				7026080C00C850D9059D91623D3B65F1 /* TargetType+Cache.swift */,
 				28842F9107EAB731EA5C348693A32519 /* Pod */,
 				1E989912DE9F0E09BF350E751BB91C08 /* Support Files */,
@@ -1694,7 +1694,7 @@
 				9879F75538A83684DD601BB7356381DC /* MoyaProviderType+Rx.swift in Sources */,
 				FD7960E1FD806E6D1CDD4459970CFF84 /* RxMoyaCache-dummy.m in Sources */,
 				2098B6B8169F12C98CAD95978711C57B /* Single+Cache.swift in Sources */,
-				C3EB8906468F0C9B67493BB444E127B3 /* TargetProvider.swift in Sources */,
+				C3EB8906468F0C9B67493BB444E127B3 /* Provider.swift in Sources */,
 				53592FA81C4B067545624D7B1CEF3756 /* TargetType+Cache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
