@@ -17,13 +17,10 @@
   "platforms": {
     "ios": "9.0"
   },
-  "swift_version": "4.0",
+  "swift_version": "4.2",
   "source_files": "RxMoyaCache/Classes/**/*",
   "dependencies": {
     "Moya/RxSwift": [
-
-    ],
-    "Cache": [
 
     ]
   }

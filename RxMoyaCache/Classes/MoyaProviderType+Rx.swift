@@ -9,7 +9,7 @@
 import RxSwift
 import Moya
 
-extension Reactive where Base: MoyaProviderType {
+extension Reactive where Base: MoyaProviderType, Base.Target: Cacheable {
     
     public func cache(_ target: Base.Target) -> TargetProvider<Base> {
         return TargetProvider(target, provider: base)

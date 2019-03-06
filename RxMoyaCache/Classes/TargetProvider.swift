@@ -9,7 +9,7 @@
 import Moya
 import RxSwift
 
-public struct TargetProvider<Provider: MoyaProviderType> {
+public struct TargetProvider<Provider: MoyaProviderType> where Provider.Target: Cacheable {
     
     private let target: Provider.Target
     private let provider: Provider
@@ -39,7 +39,7 @@ public struct TargetProvider<Provider: MoyaProviderType> {
         }.storeCachedResponse(for: target).asObservable()
         
         if let response = try? target.cachedResponse(),
-            MoyaCache.shared.storagePolicyClosure(response) {
+            target.allowsStorage(response) {
             return source.startWith(response)
         }
         return source

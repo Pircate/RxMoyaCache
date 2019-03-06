@@ -11,7 +11,8 @@ import Moya
 import RxSwift
 import RxMoyaCache
 
-enum StoryAPI: TargetType {
+enum StoryAPI: TargetType, Cacheable {
+    
     var baseURL: URL {
         return URL(string: "https://news-at.zhihu.com/api")!
     }
